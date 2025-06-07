@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="25dp"
-        android:background="@color/card_foreground"
+        app:cardBackgroundColor="@color/card_foreground"
         app:cardCornerRadius="25dp"
         android:elevation="20dp">
 
@@ -31,17 +32,19 @@
 
             <TextView
                 android:id="@+id/profile_name"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/profile_image"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="50dp"
-                tools:text="First Last"
-                android:textSize="24sp"
+                android:layout_marginTop="30dp"
+                android:background="@color/teal_200"
+                android:textAllCaps="true"
                 android:textColor="@color/black"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                android:textAllCaps="true"/>
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_image"
+                tools:text="First Last" />
 
             <TextView
                 android:id="@+id/profile_bio"
@@ -50,21 +53,24 @@
                 app:layout_constraintTop_toBottomOf="@id/profile_name"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:text="@string/profile_bio_text"
+                android:textColor="@color/black"
                 android:textSize="16sp"/>
 
             <TextView
                 android:id="@+id/profile_hobby_header"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/profile_bio"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="50dp"
                 android:text="@string/profile_hobby_header_text"
-                android:textSize="18sp"
-                android:textColor="@color/black"/>
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:background="@color/teal_200"/>
 
             <TextView
                 android:id="@+id/profile_hobby_first"
@@ -73,8 +79,9 @@
                 app:layout_constraintTop_toBottomOf="@id/profile_hobby_header"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:text="@string/profile_hobby_first_text"
+                android:textColor="@color/black"
                 android:textSize="15sp"/>
 
             <TextView
@@ -86,6 +93,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="5dp"
                 android:text="@string/profile_hobby_second_text"
+                android:textColor="@color/black"
                 android:textSize="15sp"/>
 
             <TextView
@@ -97,6 +105,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="5dp"
                 android:text="@string/profile_hobby_third_text"
+                android:textColor="@color/black"
                 android:textSize="15sp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
